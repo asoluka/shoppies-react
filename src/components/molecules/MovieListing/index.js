@@ -10,7 +10,8 @@ export const MovieListing = ({movies}) => {
   return (
     <Wrapper className="row">
       {movies &&
-        movies.map((movie) => (
+        movies.filter(item => item.Type == 'movie')
+        .map((movie) => (
           <Wrapper className="col-md-3 movie-listing" key={movie.imdbID}>
             <Image key={movie.imdbID} className="poster" src={movie.Poster} alt={movie.Title}></Image>
             <Wrapper className="row">
