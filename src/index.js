@@ -1,6 +1,6 @@
 import React from 'react'
 import reactDOM from 'react-dom'
-import './styles/style.scss'
+import './styles/style.css'
 
 const App = () => {
   return <h1>JSX World!</h1>
