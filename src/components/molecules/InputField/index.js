@@ -1,7 +1,13 @@
 import React from 'react'
+import {Wrapper} from 'components'
 
-export const InputField = () => {
+export const InputField = ({
+  children,
+  className,
+}) => {
   return (
-    <h1>Input Field</h1>
+    <Wrapper className={className}>
+      {children}
+    </Wrapper>
   )
 }

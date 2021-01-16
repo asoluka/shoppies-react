@@ -55,3 +55,15 @@ input::placeholder {
   font-size: 1.2em;
   font-style: italic;
 }
+
+.movie-search-section {
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+.lb-search-term {
+  color: white;
+  font-size: 1.5rem;
+}
