@@ -70,3 +70,15 @@ input::placeholder {
   color: white;
   font-size: 1.5rem;
 }
+
+.movie-listing-section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+.poster {
+  width: 100%;
+  max-height: 200px;
+}

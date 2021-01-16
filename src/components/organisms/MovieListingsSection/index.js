@@ -1,7 +1,10 @@
 import React from 'react'
+import { Wrapper } from 'components'
 
-export const MovieListingsSection = () => {
+export const MovieListingsSection = ({children}) => {
   return (
-    <h1>Movie Listing Section</h1>
+    <Wrapper className="row movie-listing-section">
+      {children}
+    </Wrapper>
   )
 }

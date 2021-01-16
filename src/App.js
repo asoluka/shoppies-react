@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { MovieSearchSection, Text } from 'components'
+import { 
+  MovieSearchSection, 
+  MovieListingsSection, 
+  Text,
+  Image,
+  Wrapper 
+} from 'components'
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('Special')
@@ -20,10 +26,17 @@ const App = () => {
   return (
     <div className="container">
       <MovieSearchSection onChange={handleSearch} searchTerm={searchTerm} />
-      {
-        movies && movies
-          .map((a) => <Text key={a.imdbID}>{a.Title}</Text>)
-      }
+      <MovieListingsSection>
+        <Wrapper className="row">
+          {movies &&
+            movies.map((a) => (
+              <Wrapper className="col-md-3" key={a.imdbID}>
+                <Image key={a.imdbID} className="poster" src={a.Poster} alt={a.Title}></Image>
+              </Wrapper>
+            ))
+          }
+        </Wrapper>
+      </MovieListingsSection>
     </div>
   );
 };
