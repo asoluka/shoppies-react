@@ -1,7 +1,10 @@
 import React from 'react'
 
-export const Button = () => {
+export const Button = ({
+  className,
+  children
+}) => {
   return (
-    <h1>Button</h1>
+    <button className={className}>{children}</button>
   )
 }

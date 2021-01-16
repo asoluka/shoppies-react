@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { 
   MovieSearchSection, 
-  MovieListingsSection, 
-  Text,
-  Image,
-  Wrapper 
+  MovieListingsSection,
+  MovieListing 
 } from 'components'
 
 const App = () => {
@@ -27,15 +25,7 @@ const App = () => {
     <div className="container">
       <MovieSearchSection onChange={handleSearch} searchTerm={searchTerm} />
       <MovieListingsSection>
-        <Wrapper className="row">
-          {movies &&
-            movies.map((a) => (
-              <Wrapper className="col-md-3" key={a.imdbID}>
-                <Image key={a.imdbID} className="poster" src={a.Poster} alt={a.Title}></Image>
-              </Wrapper>
-            ))
-          }
-        </Wrapper>
+        <MovieListing movies={movies} />
       </MovieListingsSection>
     </div>
   );
