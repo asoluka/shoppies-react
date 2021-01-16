@@ -1,12 +1,10 @@
 import React from 'react'
-import {Text} from 'components'
+import { MovieSearchSection } from 'components'
 
 const App = () => {
   return (
     <div className="container">
-      <h1 className="title">The Shoppies</h1>
-      <p>Movie awards for entrepreneurs</p>
-      <Text />
+      <MovieSearchSection />
     </div>
   );
 };

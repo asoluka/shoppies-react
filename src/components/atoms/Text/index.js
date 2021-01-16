@@ -1,11 +1,23 @@
 import React from 'react'
-import {Input} from 'components'
 
-export const Text = () => {
+export const Text = ({
+  className,
+  children,
+  type
+}) => {
+  if (type == 'h1') {
+    return (
+      <h1 className={className}>{children}</h1>
+    )
+  }
+
+  if (type == 'h2') {
+    return (
+      <h2 className={className}>{children}</h2>
+    )
+  }
+
   return (
-    <>
-      <h1>Text</h1>
-      <Input />
-    </>
+    <p className={className}>{children}</p>
   )
 }
