@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   width: 100%;
   line-height: 40px;
   border-radius: 5px;
-  border: 3px solid black;
+  border: 1px solid black;
   padding-left: 10px;
 }
 
@@ -57,7 +57,7 @@ input::placeholder {
 }
 
 .movie-search-section {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.808);
   border-radius: 10px;
   padding: 10px 20px;
   margin: 20px 0;
