@@ -1,14 +1,15 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 export const Input = ({
   name,
   id,
   className,
   placeholder,
-  type
+  type,
+  onChange,
+  searchTerm
 }) => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const handleSearchInput = (e) => setSearchTerm(e.target.value)
+  const handleSearchInput = (e) => onChange(e.target.value)
   
   return (
     <input 

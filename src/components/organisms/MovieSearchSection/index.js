@@ -1,7 +1,9 @@
 import React from 'react'
 import { Text, InputField, Input, Wrapper, Label } from 'components'
 
-export const MovieSearchSection = () => {
+export const MovieSearchSection = ({onChange, searchTerm}) => {
+  const handleSearch = (value) => onChange(value)
+
   return (
     <Wrapper>
       <Wrapper>
@@ -20,7 +22,9 @@ export const MovieSearchSection = () => {
             placeholder="Enter movie to search" 
             id="search-term" 
             className="input-control" 
-            type="text" 
+            type="text"
+            onChange={handleSearch}
+            value={searchTerm}
             />
         </InputField>
       </Wrapper>
