@@ -23,6 +23,10 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+    modules: [].concat('src', ['node_modules']),
+  },
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'build')
