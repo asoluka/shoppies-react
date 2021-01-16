@@ -1,7 +1,16 @@
 import React from 'react'
+import { Text, Input } from 'components'
 
 export const MovieSearchSection = () => {
   return (
-    <h1>Movie Search Section</h1>
+    <>
+      <Text className="title" type="h1">The Shoppies</Text>
+      <Text className="hero">Movie awards for entrepreneurs</Text>
+      <Input 
+        name="search-term" 
+        placeholder="Enter movie to search" 
+        id="search-term" 
+        className="input-control" />
+    </>
   )
 }

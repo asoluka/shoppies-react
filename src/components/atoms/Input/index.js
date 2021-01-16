@@ -1,7 +1,16 @@
 import React from 'react'
 
-export const Input = () => {
+export const Input = ({
+  name,
+  id,
+  className,
+  placeholder
+}) => {
   return (
-    <h1>Input</h1>
+    <input 
+      name={name} 
+      id={id} 
+      className={className} 
+      placeholder={placeholder} />
   )
 }
