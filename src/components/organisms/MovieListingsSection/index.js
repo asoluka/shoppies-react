@@ -1,10 +1,14 @@
 import React from 'react'
 import { Wrapper } from 'components'
 
-export const MovieListingsSection = ({children}) => {
+export const MovieListingsSection = ({movies, children}) => {
   return (
-    <Wrapper className="row movie-listing-section">
-      {children}
+    <Wrapper>
+      {movies && (
+        <Wrapper className="row movie-listing-section">
+          {children}
+        </Wrapper>
+      )}
     </Wrapper>
   )
 }

@@ -2,15 +2,24 @@ import React, { useState, useEffect } from 'react'
 import { 
   MovieSearchSection, 
   MovieListingsSection,
-  MovieListing 
+  MovieListing,
+  NominatedMoviesSection,
+  Wrapper,
+  Text
 } from 'components'
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('Special')
   const [movies, setMovies] = useState(null)
+  const [nominations, setNominations] =useState([])
 
   const handleSearch = (value) => setSearchTerm(value)
-  
+  const nominate = (movieData) => {
+    setNominations([ ...nominations,
+      movieData
+    ])
+  }
+
   useEffect(() => {
     // API Call.
     (async function fetchMovies() {
@@ -23,9 +32,16 @@ const App = () => {
   
   return (
     <div className="container">
+      <Wrapper className="row">
+        <Wrapper className="col-md-6">
+          <Text className="title" type="h1">The Shoppies</Text>
+          <Text className="hero">Movie awards for entrepreneurs</Text>
+        </Wrapper>
+        <NominatedMoviesSection className="col-md-6" movies={nominations} />
+      </Wrapper>
       <MovieSearchSection onChange={handleSearch} searchTerm={searchTerm} />
-      <MovieListingsSection>
-        <MovieListing movies={movies} />
+      <MovieListingsSection movies={movies}>
+        <MovieListing movies={movies} nominateMovie={nominate} />
       </MovieListingsSection>
     </div>
   );

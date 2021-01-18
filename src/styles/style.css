@@ -25,9 +25,7 @@ small {
 }
 
 .container {
-  margin: 0 auto;
-  max-width:1000px;
-  padding: 40px;
+  padding-top: 40px;
 }
 
 .title {
@@ -88,7 +86,7 @@ input::placeholder {
 
 .poster {
   width: 100%;
-  max-height: 200px;
+  max-height: 220px;
   border-radius: 5px 5px 0 0;
 }
 
@@ -108,4 +106,26 @@ input::placeholder {
   color: white;
   font-size: 1rem;
   margin-left: 10px;
+}
+
+.nominated-movies {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nominated-movie {
+  padding: 10px 10px 10px 0;
+}
+
+.close-button {
+  margin: auto;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0 5px 3px 5px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
 }

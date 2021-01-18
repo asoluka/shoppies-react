@@ -1,15 +1,11 @@
 import React from 'react'
 import { Text, InputField, Input, Wrapper, Label } from 'components'
 
-export const MovieSearchSection = ({onChange, searchTerm}) => {
+export const MovieSearchSection = ({onChange, searchTerm, className}) => {
   const handleSearch = (value) => onChange(value)
 
   return (
-    <Wrapper>
-      <Wrapper>
-        <Text className="title" type="h1">The Shoppies</Text>
-        <Text className="hero">Movie awards for entrepreneurs</Text>
-      </Wrapper>
+    <Wrapper className={className}>
       <Wrapper className="movie-search-section">
         <InputField>
           <Label 

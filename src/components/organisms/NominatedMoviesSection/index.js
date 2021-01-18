@@ -1,7 +1,16 @@
 import React from 'react'
+import { 
+  NominatedMovie,
+  Wrapper
+} from 'components'
 
-export const NominatedMoviesSection = () => {
+export const NominatedMoviesSection = ({
+  movies,
+  className
+}) => {
   return (
-    <h1>Nominated Movies Section</h1>
+    <Wrapper className={className}>
+      <NominatedMovie movies={movies} />
+    </Wrapper>
   )
 }

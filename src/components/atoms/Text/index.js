@@ -22,6 +22,14 @@ export const Text = ({
     )
   }
 
+  if (type == 'h3') {
+    return (
+      <h3 
+        className={className}
+        title={title}>{children}</h3>
+    )
+  }
+
   if (type == 'span') {
     return (
       <span 

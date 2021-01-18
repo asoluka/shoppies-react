@@ -6,7 +6,8 @@ import {
   Button
 } from 'components'
 
-export const MovieListing = ({movies}) => {
+export const MovieListing = ({movies, nominateMovie}) => {
+
   return (
     <Wrapper className="row">
       {movies &&
@@ -25,7 +26,7 @@ export const MovieListing = ({movies}) => {
                     {movie.Year}
                   </Text>
                 </Text>
-                <Button className="nominate">Nominate</Button>
+                <Button className="nominate" onClick={()=>nominateMovie(movie)}>Nominate</Button>
               </Wrapper>
             </Wrapper>
           </Wrapper>
